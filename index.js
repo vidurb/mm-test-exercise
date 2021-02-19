@@ -22,7 +22,7 @@ const markText = "vidur";
 const markImage = `<svg height="40" width="100"> <text x="5" y="30" font-size="24" fill="#000" opacity="0.75">${markText}</text></svg>`;
 
 async function resize(data, height, width) {
-  await sharp(data)
+  return sharp(data)
     .resize(width, height, { fit: "cover" })
     .png()
     .composite([{ input: Buffer.from(markImage), gravity: "southwest" }])
@@ -30,7 +30,7 @@ async function resize(data, height, width) {
 }
 
 async function s3upload(data, key) {
-  await s3.send(
+  return s3.send(
     new PutObjectCommand({
       Bucket: process.env.S3_BUCKET,
       Key: key,
@@ -45,7 +45,7 @@ function generateFilenames(name) {
 }
 
 async function getUrl(key) {
-  await getSignedUrl(
+  return getSignedUrl(
     s3,
     new GetObjectCommand({ Bucket: process.env.S3_BUCKET, Key: key }),
     { expiresIn: 86400 }
