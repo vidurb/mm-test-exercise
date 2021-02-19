@@ -7,7 +7,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
-    "prod": "node index.js"
+    "prod": "node index.js",
+    "lint": "eslint index.js",
+    "fix": "eslint --fix index.js"
   },
   "author": "Vidur Butalia <vidurbutalia@gmail.com>",
   "license": "ISC",
@@ -20,6 +22,30 @@
     "sharp": "^0.27.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "eslint": "^7.20.0",
+    "eslint-config-adjunct": "^4.9.0",
+    "eslint-config-auto": "^0.6.6",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-array-func": "^3.1.7",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-html": "^6.1.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-json": "^2.1.2",
+    "eslint-plugin-markdown": "^2.0.0",
+    "eslint-plugin-no-constructor-bind": "^2.0.4",
+    "eslint-plugin-no-secrets": "^0.6.8",
+    "eslint-plugin-no-unsanitized": "^3.1.4",
+    "eslint-plugin-no-use-extend-native": "^0.5.0",
+    "eslint-plugin-optimize-regex": "^1.2.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-promise": "^4.3.1",
+    "eslint-plugin-scanjs-rules": "^0.2.1",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-sonarjs": "^0.6.0",
+    "eslint-plugin-switch-case": "^1.1.2",
+    "eslint-plugin-unicorn": "^28.0.2",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.2.1"
   }
 }
