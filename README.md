@@ -10,5 +10,7 @@ URLs to access the processed images that are valid for 24 hours.
 ## Usage
 
 - Run `npm ci` to install dependencies
+- Create a `.env` file with environment variables as shown in `.env.example`. 
+All variables are required.
 - Run `npm run dev` to start the server on port 9000 with hot reloading enabled,
 or `npm run prod` to start the server without hot reloading.
